@@ -5,17 +5,18 @@ exec ros -Q -- $0 "$@"
 |#
 (progn ;;init forms
   (ros:ensure-asdf)
-  #+quicklisp(ql:update-all-dists)
+  ;; optional
+  ;;#+quicklisp(ql:update-all-dists)
   ;; local project
   #+quicklisp(ql:quickload :clx-truetype :silent t)
   ;; stumptray
   #+quicklisp(ql:quickload :xembed :silent t)
   ;; 
-  #+quicklisp(ql:quickload :local-time :silent t)
   ;;#+quicklisp(ql:quickload :dexador :silent t)
   ;;#+quicklisp(ql:quickload :yason :silent t)
   ;;#+quicklisp(ql:quickload :swank :silent t)
   #+quicklisp(ql:quickload :slynk :silent t)
+  #+quicklisp(ql:quickload :local-time :silent t)
   ;; stumpwm
   #+quicklisp(ql:quickload :stumpwm :silent t)
   )
