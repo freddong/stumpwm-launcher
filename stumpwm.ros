@@ -5,8 +5,6 @@ exec ros -Q -- $0 "$@"
 |#
 (progn ;;init forms
   (ros:ensure-asdf)
-  ;; optional
-  ;;#+quicklisp(ql:update-all-dists)
   ;; local project
   #+quicklisp(ql:quickload :clx-truetype :silent t)
   ;; stumptray
