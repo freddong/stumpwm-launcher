@@ -7,6 +7,7 @@ prepare:
 	ros install quicklisp
 	git clone https://github.com/goose121/clx-truetype ~/.roswell/local-projects/clx-truetype || echo "project exists"
 	git clone https://github.com/stumpwm/stumpwm.git ~/.roswell/local-projects/stumpwm || echo "project exists"
+	ros install clx
 
 upgrade:
 	ros run -e '(print (lisp-implementation-version))' -q
